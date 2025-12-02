@@ -33,14 +33,8 @@ const isP1 = (i: number) => {
 
 const isP2 = (i: number) => {
   const s = i.toString();
-  // Matches any character sequence (captured in group 1) followed by itself
-  const regex = /(.+)\1/; 
-  const match = s.match(regex);
-  if (match) {
-    return true; // match[1]; // Returns the first instance of the repeating substring
-  }
-
-  return false;
+  const regex = /^(\d+)\1{1,}$/;
+  return s.match(regex);
 };
 
 export const day2 = () => {
