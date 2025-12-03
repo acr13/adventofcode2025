@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import { readFileSync } from 'fs';
 
 const steps = readFileSync('inputs/2.txt', 'utf8').split('\n');
 
@@ -55,7 +55,3 @@ export const day2 = () => {
 
   return [p1, p2];
 };
-
-const p2 = () => {
-
-}
